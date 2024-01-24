@@ -9,7 +9,7 @@ const theme = extendTheme({
     primary: '#312a45',
     deepPink: '#e83657',
     lightPink: '#e26176',
-  }
+  },
 })
 
 export default theme;
