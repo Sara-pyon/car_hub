@@ -4,8 +4,8 @@ import { IoIosSearch } from "react-icons/io";
 
 const HeaderContent = () => {
   return (
-        <Box width='fit-content' paddingBlock={10}>
-            <Heading size='3xl' paddingBottom={10} color='white'>
+        <Box width='fit-content' paddingBlock={10} paddingInline={3}>
+            <Heading size={{base: '2xl', sm: '3xl'}} paddingBottom={10} color='white'>
                 Find the car that's <br/> searching for you.
             </Heading>
             <InputGroup outline='none'>

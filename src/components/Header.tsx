@@ -8,13 +8,15 @@ const Header = () => {
   return (
    <Box backgroundImage={bg}
         backgroundPosition="center"
-        backgroundSize='100%'
+        backgroundRepeat='no-repeat'
+        backgroundSize='cover'
+        objectFit='cover'
         >
     <div className="container">
       <NavBar />
       <HeaderContent />
-      <HeaderFooter />
     </div>
+      <HeaderFooter />
    </Box>
   )
 }

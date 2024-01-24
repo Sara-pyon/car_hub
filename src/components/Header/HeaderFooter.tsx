@@ -10,10 +10,11 @@ const HeaderFooter = () => {
         {1: 'Carma Checklist certified.', 2: 'Examined by experts.', icon: <TbReportSearch />},
     ]
   return (
-            <SimpleGrid columns={{base:1, md: 2, lg: 3}} rowGap={2} 
-                        bg="blackAlpha.600" paddingTop={5}>
-                {element.map((e,index) => <IconText key={index} element={e} />)}
-            </SimpleGrid>
+            <Box  bg="blackAlpha.600" paddingTop={5}>
+                <SimpleGrid columns={{base:1, md: 2, lg: 3}} rowGap={2} className='container'>
+                    {element.map((e,index) => <IconText key={index} element={e} />)}
+                </SimpleGrid>
+            </Box>
   )
 }
 
