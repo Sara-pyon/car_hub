@@ -22,8 +22,8 @@ const HeaderContent = () => {
                 <Text width='70px' textAlign='center'>or</Text>
                 <Box height='1px' bg='white' opacity='0.5' width='100%'/>
             </Box>
-            <Button bg='deepPink'  color='white' width='100%'
-                    height='60px'>
+            <Button color='white' width='100%'
+                    height='60px' >
                 Browse all 733 cars
             </Button>
         </Box>
