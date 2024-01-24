@@ -1,8 +1,8 @@
-import HeaderContent from './Header/HeaderContent'
-import NavBar from './NavBar/NavBar'
-import bg from '../images/background.jpg.png'
+import HeaderContent from './HeaderContent'
+import NavBar from '../NavBar/NavBar'
+import bg from '../../images/background.jpg.png'
 import { Box } from '@chakra-ui/react'
-import HeaderFooter from './Header/HeaderFooter'
+import HeaderFooter from './HeaderFooter'
 
 const Header = () => {
   return (

@@ -12,6 +12,7 @@
 .container{
   max-width: 1200px;
   margin-inline: auto;
+  overflow: hidden;
 }
 body{
   font-family: var(--font-primary);
@@ -24,4 +25,6 @@ body{
   font-size: 1.5rem;
   transform: rotate(-10deg);
   color: var(--color-deeppink);
+  width: fit-content;
 }
+

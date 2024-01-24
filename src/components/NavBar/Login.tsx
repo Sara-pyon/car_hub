@@ -1,8 +1,8 @@
-import { FaRegUser } from "react-icons/fa";
+import { FiUser } from "react-icons/fi";
 
 const Login = () => {
   return (
-    <FaRegUser fontSize={18}/>
+    <FiUser fontSize={20} color="white" />
   )
 }
 
