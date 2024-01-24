@@ -2,7 +2,7 @@ import { FaRegUser } from "react-icons/fa";
 
 const Login = () => {
   return (
-    <FaRegUser />
+    <FaRegUser fontSize={18}/>
   )
 }
 
