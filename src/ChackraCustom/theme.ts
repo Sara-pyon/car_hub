@@ -13,7 +13,7 @@ const theme = extendTheme({
   colors: {
     primary: '#312a45',
     deepPink: '#e83657',
-    lightPink: '#e26176',
+    lightPink: '#ff6e82',
   },
   components: {
     Button: {
@@ -31,7 +31,20 @@ const theme = extendTheme({
       // Then here we set the base variant as the default
       variant: 'base'
     }
-  }
+  },
+    Text:{
+      baseStyle:{
+        color: '#150d2c'
+      },
+      variants: {
+        // Make a variant, we'll call it `base` here and leave it empty
+        base: {}
+    },
+    defaultProps: {
+      // Then here we set the base variant as the default
+      variant: 'base'
+    }
+    }
  }
 })
 

@@ -19,7 +19,7 @@ const HeaderContent = () => {
             </InputGroup>
             <Box width='100%' display='flex' flexDirection='row' alignItems='center' paddingBlock='1px'>
                 <Box height='1px' bg='white' opacity='0.5' width='100%'/>
-                <Text width='70px' textAlign='center'>or</Text>
+                <Text width='70px' textAlign='center' color='white'>or</Text>
                 <Box height='1px' bg='white' opacity='0.5' width='100%'/>
             </Box>
             <Button color='white' width='100%'
