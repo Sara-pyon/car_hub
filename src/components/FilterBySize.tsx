@@ -1,6 +1,6 @@
 import CarCard from './CarCard';
 import use2018Cars from '../hooks/use2018Cars';
-import { Box, Flex } from '@chakra-ui/react';
+import { Box} from '@chakra-ui/react';
 import CarClass from './CarClass';
 
 

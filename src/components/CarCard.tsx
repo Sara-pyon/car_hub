@@ -1,9 +1,9 @@
-import { Box, Card, CardBody, Flex, Heading, Image, SimpleGrid, Text, Tooltip} from '@chakra-ui/react'
+import { Box, Card, CardBody, Flex, Heading, Image, Text, Tooltip} from '@chakra-ui/react'
 import carImage from '../images/104058_XC_02.jpg.png'
 import { Cars } from '../hooks/use2018Cars'
 import { IoHeartOutline, IoHeart } from 'react-icons/io5'
 import { CiCircleInfo } from "react-icons/ci";
-import { useState } from 'react';
+import useFavoriteCarStore from '../Store';
 
 interface Props{
    car: Cars | undefined;
@@ -11,8 +11,9 @@ interface Props{
 
 const CarCard = ({car}:Props) => {
 
-  const [selectedFev, setSelectedFev] = useState<string>('');
-  const onSelectFev = (model:string) => setSelectedFev(model);
+  const {favoriteCars,addFavorite, removeFavorite} = useFavoriteCarStore();
+
+  if(!car) return null;
 
   return (
     <Box >
@@ -33,7 +34,12 @@ const CarCard = ({car}:Props) => {
                   </Text>
                 </div>
                 <Box paddingTop={1} marginLeft={1}>
-                  <IoHeartOutline size={20} cursor='pointer'/>
+                  {favoriteCars.find(c => c.model === car.model) ?
+                  <IoHeart size={20} cursor='pointer' color='deepPink'
+                                  onClick={() => removeFavorite(car?.model)}/> :
+                  <IoHeartOutline size={20} cursor='pointer'
+                                  onClick={() => addFavorite(car?.model)}/> 
+                  }
                 </Box>
               </Flex>
               <Flex alignItems='end'>
