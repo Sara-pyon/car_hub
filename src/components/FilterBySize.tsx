@@ -16,7 +16,7 @@ const FilterBySize = () => {
   return (
     <div className='section container'>
     <CarClass />
-    <Box display='flex' flexDirection='row'
+    <Box display='flex' flexDirection='row' columnGap={5}
     overflowX='scroll'>
       {data.map((car,index) => <CarCard key={index} car={car} />)}
     </Box>

@@ -16,7 +16,7 @@ const CarClass = () => {
 
   return (
     <Flex flexDirection='column' paddingBottom={5}>
-        <Heading paddingBottom={5}>
+        <Heading paddingBottom={6}>
             Looking for a specific size?
         </Heading>
         <Flex columnGap={8} paddingInline={4} >

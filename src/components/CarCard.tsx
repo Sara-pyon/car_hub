@@ -1,8 +1,9 @@
 import { Box, Card, CardBody, Flex, Heading, Image, SimpleGrid, Text, Tooltip} from '@chakra-ui/react'
 import carImage from '../images/104058_XC_02.jpg.png'
 import { Cars } from '../hooks/use2018Cars'
-import { IoHeartOutline } from 'react-icons/io5'
+import { IoHeartOutline, IoHeart } from 'react-icons/io5'
 import { CiCircleInfo } from "react-icons/ci";
+import { useState } from 'react';
 
 interface Props{
    car: Cars | undefined;
@@ -10,9 +11,13 @@ interface Props{
 
 const CarCard = ({car}:Props) => {
 
+  const [selectedFev, setSelectedFev] = useState<string>('');
+  const onSelectFev = (model:string) => setSelectedFev(model);
+
   return (
-    <Box width='700px'>
-      <Card borderRadius={10} width='100%'>
+    <Box >
+      <Card borderRadius={10} width='300px' height='330px'
+            overflow='hidden'>
           <Image src={carImage} alt='car image'/>
           <CardBody>
               <Flex justifyContent='space-between'>
@@ -27,7 +32,7 @@ const CarCard = ({car}:Props) => {
                     {car?.transmission === 'a' ? 'Automatic' : 'Manual'}
                   </Text>
                 </div>
-                <Box paddingTop={1}>
+                <Box paddingTop={1} marginLeft={1}>
                   <IoHeartOutline size={20} cursor='pointer'/>
                 </Box>
               </Flex>
@@ -35,7 +40,7 @@ const CarCard = ({car}:Props) => {
                 <Heading fontSize='2xl' paddingTop={3}>
                   ${`${car?.city_mpg},000`}
                 </Heading>
-                <Box paddingBottom='5px' paddingLeft={1}>
+                <Box paddingBottom='5px' paddingLeft={2}>
                   <Tooltip label={`Drive Transmission: ${car?.drive.toLocaleUpperCase()}`} aria-label='A tooltip'>
                     <span>
                       <CiCircleInfo />
