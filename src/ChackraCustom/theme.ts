@@ -11,9 +11,11 @@ const theme = extendTheme({
     body: `'Inter Variable', sans-serif`,
   },
   colors: {
-    primary: '#312a45',
+    first: '#150D2C',
+    second: '#332E69',
     deepPink: '#e83657',
-    lightPink: '#ff6e82',
+    lightPink: '#FF6E82',
+    border: '#DCE4E9'
   },
   components: {
     Button: {
@@ -34,7 +36,7 @@ const theme = extendTheme({
   },
     Text:{
       baseStyle:{
-        color: '#150d2c'
+        color: '#150D2C'
       },
       variants: {
         // Make a variant, we'll call it `base` here and leave it empty
@@ -44,7 +46,20 @@ const theme = extendTheme({
       // Then here we set the base variant as the default
       variant: 'base'
     }
-    }
+    },
+    Heading:{
+      baseStyle :{
+        color: '#150D2C'
+      },
+      variants: {
+        // Make a variant, we'll call it `base` here and leave it empty
+        base: {}
+      },
+      defaultProps: {
+        // Then here we set the base variant as the default
+        variant: 'base'
+      }
+      }
  }
 })
 

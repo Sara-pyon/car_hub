@@ -17,6 +17,10 @@
 body{
   font-family: var(--font-primary);
 }
+.section{
+  padding-block: 4rem;
+}
+
 
 /* Logo */
 .logo{

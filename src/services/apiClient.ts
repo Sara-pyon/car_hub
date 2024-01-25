@@ -8,7 +8,7 @@ const axiosInstance = axios.create({
         'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
     },
     params:{
-        limit: 10,
+        limit: 50,
     }
 })
 
@@ -19,7 +19,7 @@ class APIClient<T>{
     }
 
     get = (config : AxiosRequestConfig) => {
-        return axiosInstance.get<T>(this.endpoint, config)
+        return axiosInstance.get<T[]>(this.endpoint, config)
                             .then(res => res.data);
     }
 
