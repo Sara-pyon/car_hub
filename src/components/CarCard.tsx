@@ -17,7 +17,7 @@ const CarCard = ({car}:Props) => {
 
   return (
     <Box >
-      <Card borderRadius={10} width='300px' height='330px'
+      <Card borderRadius={10} width='300px' height='380px'
             overflow='hidden'>
           <Image src={carImage} alt='car image'/>
           <CardBody>

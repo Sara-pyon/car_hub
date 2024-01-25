@@ -1,8 +1,9 @@
 import CarCard from './CarCard';
 import use2018Cars from '../hooks/use2018Cars';
-import { Box} from '@chakra-ui/react';
-import CarClass, { carFuel } from './CarFuel';
+import { Box, Button, Flex} from '@chakra-ui/react';
+import CarClass from './CarFuel';
 import { useState } from 'react';
+import { IoIosArrowForward } from "react-icons/io";
 
 
 const FilterBySize = () => {
@@ -17,9 +18,16 @@ const FilterBySize = () => {
     <div className='section container'>
     <CarClass onSelect={(fuel) => setSelectedFuel(fuel)} selectedFuel={selectedFuel}/>
     <Box display='flex' flexDirection='row' columnGap={5}
-    overflowX='scroll'>
+    overflowX='scroll' paddingBottom={2}>
       {data.map((car,index) => <CarCard key={index} car={car} />)}
     </Box>
+    <Flex justifyContent='center' paddingBlock={5}>
+      <Button bg='second' color='white' fontSize='sm'
+              rightIcon={<IoIosArrowForward />}
+              _hover={{bg:'second'}}>
+        View all Suvs
+      </Button>
+    </Flex>
     </div>
   )
 }

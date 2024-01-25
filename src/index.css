@@ -8,6 +8,7 @@
   --color-deeppink: #e83657;
   --color-icon-pink: #e26176;
   --color-primary: #312a45;
+  --color-secondary: #423E71;
 }
 .container{
   max-width: 1200px;
@@ -31,4 +32,3 @@ body{
   color: var(--color-deeppink);
   width: fit-content;
 }
-

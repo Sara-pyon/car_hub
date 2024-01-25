@@ -13,6 +13,7 @@ const theme = extendTheme({
   colors: {
     first: '#150D2C',
     second: '#332E69',
+    bgPrimary: '#F8FBFE',
     deepPink: '#e83657',
     lightPink: '#FF6E82',
     border: '#DCE4E9'
