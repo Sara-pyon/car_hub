@@ -1,14 +1,14 @@
-import axios from "axios";
-
+import axios, { AxiosRequestConfig } from "axios";
 
 const axiosInstance = axios.create({
-    baseURL: 'https://car-api2.p.rapidapi.com/api',
+    baseURL: 'https://cars-by-api-ninjas.p.rapidapi.com/v1',
     headers: {
-        'X-RapidAPI-Key' : '4b4776850dmsha4e95db4f77dc6ap17ec11jsn08ddff972c92',
-        'X-RapidAPI-Host' : 'car-api2.p.rapidapi.com'
+        'X-Api-Key': 'fRFLz1ZQCpmpSpza+wFOEg==ovmkFYyFshYmuIiq',
+        'X-RapidAPI-Key': '4b4776850dmsha4e95db4f77dc6ap17ec11jsn08ddff972c92',
+        'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
     },
     params:{
-        limit: 30
+        limit: 10,
     }
 })
 
@@ -18,8 +18,8 @@ class APIClient<T>{
         this.endpoint = endpoint
     }
 
-    getAll = () => {
-        return axiosInstance.get<T>(this.endpoint)
+    get = (config : AxiosRequestConfig) => {
+        return axiosInstance.get<T>(this.endpoint, config)
                             .then(res => res.data);
     }
 

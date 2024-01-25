@@ -5,11 +5,15 @@ interface Cars{
     model:string;
 }
 
-const apiClient = new APIClient<Cars>('/models')
+const apiClient = new APIClient<Cars>('/cars')
 
 const useModel = () => useQuery({
-    queryKey: ['model'],
-    queryFn: apiClient.getAll
+    queryKey: ['2018'],
+    queryFn: () => apiClient.get({
+        params :{
+            year: 2018
+        },
+    })
 })
 
 export default useModel
