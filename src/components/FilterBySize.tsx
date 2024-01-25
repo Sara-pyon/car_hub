@@ -1,21 +1,21 @@
 import CarCard from './CarCard';
 import use2018Cars from '../hooks/use2018Cars';
 import { Box} from '@chakra-ui/react';
-import CarClass from './CarClass';
+import CarClass, { carFuel } from './CarFuel';
+import { useState } from 'react';
 
 
 const FilterBySize = () => {
-    const {data, error, isLoading} = use2018Cars();
-
+    const [selectedFuel, setSelectedFuel] = useState<string>('');
+    const {data, error, isLoading} = use2018Cars(selectedFuel);
+    
     if(error) throw error
     if(!data) return null
     if(isLoading) return null
 
-    console.log(data);
-
   return (
     <div className='section container'>
-    <CarClass />
+    <CarClass onSelect={(fuel) => setSelectedFuel(fuel)} selectedFuel={selectedFuel}/>
     <Box display='flex' flexDirection='row' columnGap={5}
     overflowX='scroll'>
       {data.map((car,index) => <CarCard key={index} car={car} />)}
