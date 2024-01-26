@@ -7,7 +7,7 @@ import { useState } from 'react';
 import Corma from '../Corma';
 
 const NavBar = () => {
-  const [toggled, setToggled] = useState(false);
+  const [toggled, setToggled] = useState(true);
   const toggle  = () => setToggled(!toggled);
   const navClass = toggled ? 'nav__list' : 'nav__list show';
 

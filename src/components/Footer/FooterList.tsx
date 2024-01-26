@@ -10,7 +10,7 @@ interface Props{
 }
 
 const FooterList = ({title,list}:Props) => {
-  const [toggled, setToggled] = useState(false);
+  const [toggled, setToggled] = useState(true);
   const toggleList = toggled? styles.footerMenuList : 
                               [styles.footerMenuList, styles.showList].join(' ');
   const toggleChevron = toggled? styles.footerChevron : 
