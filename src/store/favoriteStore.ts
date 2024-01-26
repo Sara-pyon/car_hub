@@ -13,7 +13,7 @@ interface FavoriteStore{
 
 const useFavoriteCarStore = create<FavoriteStore>()(
     persist(
-        (set,get) => ({
+        (set) => ({
     favoriteCars: [],
     addFavorite: (model) => set((state) => ({favoriteCars: [...state.favoriteCars, {model}]})),
     removeFavorite: (model) => set((state) => ({favoriteCars: state.favoriteCars.filter(c => c.model !== model)}))

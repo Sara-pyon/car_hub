@@ -1,5 +1,4 @@
 import { Box, Heading, SimpleGrid, Image } from '@chakra-ui/react'
-import React from 'react'
 import image1 from '../images/image.png'
 import image2 from '../images/image_1.png'
 import image3 from '../images/image_2.png'

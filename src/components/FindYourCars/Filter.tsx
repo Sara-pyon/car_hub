@@ -25,7 +25,7 @@ const Filter = () => {
             <FilterItem 
             icon={<IoCarOutline fontSize={23} />}
             title='Make' list={carsFilter.markers} 
-            onSelect={(item) => setMaker(item)}
+            onSelect={(item) => setMaker(item.toLowerCase())}
             selectedItem={carQuery.make}/>
         </Box>
         <Box>
@@ -33,7 +33,7 @@ const Filter = () => {
             icon={<IoCalendarClearOutline fontSize={20} />}
             title='Year'
             list={carsFilter.years}
-            onSelect={(item) => setYear(item)}
+            onSelect={(item) => setYear(item.toLowerCase())}
             selectedItem={carQuery.year} />
         </Box>
         <Box>
@@ -41,7 +41,7 @@ const Filter = () => {
             icon={<TbWheel fontSize={23} />}
             title='Drivetrain'
             list={carsFilter.drives}
-            onSelect={(item) => setDrive(item)}
+            onSelect={(item) => setDrive(item.toLowerCase())}
             selectedItem={carQuery.drive} />
         </Box>
         <Box>
@@ -49,7 +49,7 @@ const Filter = () => {
             icon={<GiGearStickPattern fontSize={23} />}
             title='Transmission'
             list={carsFilter.transmission}
-            onSelect={(item) => setTransmission(item)}
+            onSelect={(item) => setTransmission(item.toLowerCase())}
             selectedItem={carQuery.transmission} />
         </Box>
         <Box>
@@ -57,7 +57,7 @@ const Filter = () => {
             icon={<PiGasPump fontSize={23} />}
             title='Fuel Type'
             list={carsFilter.fuelType}
-            onSelect={(item) => setFuelType(item)}
+            onSelect={(item) => setFuelType(item.toLowerCase())}
             selectedItem={carQuery.fuel} />
         </Box>
     </Box>

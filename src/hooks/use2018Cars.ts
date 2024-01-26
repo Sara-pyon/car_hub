@@ -19,8 +19,7 @@ const use2018Cars = (selectedFuel: string) => useQuery<Cars[], Error>({
     queryKey: ['2018', selectedFuel],
     queryFn: () => apiClient.get({
         params :{
-            year: 2018,
-            fuel_type: selectedFuel
+            year: 2018
         },
     }),
 })

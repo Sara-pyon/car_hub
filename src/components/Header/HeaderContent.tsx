@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, Input, InputGroup, InputRightElement, SimpleGrid, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, Input, InputGroup, InputRightElement, Text } from '@chakra-ui/react'
 import { IoIosSearch } from "react-icons/io";
 
 
