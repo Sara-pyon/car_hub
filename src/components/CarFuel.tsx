@@ -12,7 +12,7 @@ const CarClass = ({onSelect, selectedFuel}:Props) => {
 
   return (
     <Flex flexDirection='column' paddingBottom={5}>
-        <Heading paddingBottom={6}>
+        <Heading paddingBottom={6} fontSize='3xl'>
             Looking for a specific fuel type?
         </Heading>
         <Flex columnGap={8} paddingInline={4} >

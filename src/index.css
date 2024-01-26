@@ -32,3 +32,11 @@ body{
   color: var(--color-deeppink);
   width: fit-content;
 }
+
+/* Hide */
+@media screen and (max-width: 992px) {
+  .hide-pic-below-lg{
+    display: none;
+  }
+  
+}

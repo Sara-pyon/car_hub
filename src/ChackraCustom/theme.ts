@@ -14,6 +14,7 @@ const theme = extendTheme({
     first: '#150D2C',
     second: '#332E69',
     bgPrimary: '#F8FBFE',
+    bgSecondary: '#EBF2F5',
     deepPink: '#e83657',
     lightPink: '#FF6E82',
     border: '#DCE4E9'

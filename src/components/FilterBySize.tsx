@@ -25,7 +25,7 @@ const FilterBySize = () => {
       <Button bg='second' color='white' fontSize='sm'
               rightIcon={<IoIosArrowForward />}
               _hover={{bg:'second'}}>
-        View all Suvs
+        View all {selectedFuel}
       </Button>
     </Flex>
     </div>
