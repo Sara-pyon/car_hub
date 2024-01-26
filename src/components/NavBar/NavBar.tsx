@@ -5,15 +5,24 @@ import { IoMdMenu } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
 import { useState } from 'react';
 import Corma from '../Corma';
+import { Box } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
-const NavBar = () => {
+interface Props{
+  background: string;
+}
+
+const NavBar = ({background}:Props) => {
   const [toggled, setToggled] = useState(true);
   const toggle  = () => setToggled(!toggled);
   const navClass = toggled ? 'nav__list' : 'nav__list show';
 
   return (
-    <div className="nav">
-        <Corma />
+    <Box className="nav" bg={background} 
+          height={{base:'3rem', md:'4rem'}}>
+        <Link to='/'>
+          <Corma />
+        </Link>
         <ul className={navClass}>
               <li className='nav__item'>Find your Car</li>
               <li className='nav__item'>Sell or trade in</li>
@@ -28,7 +37,7 @@ const NavBar = () => {
             <IoMdMenu color='white' fontSize={20} 
               className='toggle-open' onClick={toggle}/>
           </div>
-    </div>
+    </Box>
   )
 }
 

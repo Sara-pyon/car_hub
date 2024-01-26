@@ -1,7 +1,6 @@
 import { Box, Flex, Heading, Text} from "@chakra-ui/react";
 import { PiCarProfileLight } from "react-icons/pi";
-
-export const carFuel = ['gas','diesel','electricity'];
+import carsFilter from "../data/carsFilter";
 
 interface Props{
     onSelect : (fuel:string) => void;
@@ -16,7 +15,7 @@ const CarClass = ({onSelect, selectedFuel}:Props) => {
             Looking for a specific fuel type?
         </Heading>
         <Flex columnGap={8} paddingInline={4} >
-            {carFuel.map(fuel =>
+            {carsFilter.fuelType.map(fuel =>
             <Box key={fuel}
                 display='flex' flexDirection='column' alignItems='center' >
                <PiCarProfileLight display='inline-flex' 

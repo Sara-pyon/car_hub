@@ -7,7 +7,7 @@ const router = createBrowserRouter([
     {path:'/', element: <Layout />,
     children: [
         {index:true, element: <HomePage /> },
-        {path:'cars/:slug', element:<FindYourCar /> }
+        {path:'cars/find/:slug', element:<FindYourCar /> }
     ]
 }
 ])

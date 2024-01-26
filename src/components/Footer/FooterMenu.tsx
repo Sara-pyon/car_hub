@@ -14,10 +14,10 @@ const FooterMenu = () => {
       rowGap={2} justifyContent={{base:'left',lg:'center'}}
       paddingBlock={10}
       borderBlock='2px solid #DCE4E9'>
-    <FooterList list={popularMakers} title='Popular Makes' />
-    <FooterList list={about} title='About us' />
-    <FooterList list={support} title='Support' />
-    <FooterList list={follow} title='Follow us' />
+    <FooterList list={popularMakers} title='Popular Makes' link='find' />
+    <FooterList list={about} title='About us' link='about'/>
+    <FooterList list={support} title='Support' link='support' />
+    <FooterList list={follow} title='Follow us' link='follow' />
     </SimpleGrid>
   )
 }

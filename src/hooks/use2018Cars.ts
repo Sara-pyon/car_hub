@@ -10,6 +10,7 @@ export interface Cars{
     transmission: string;
     city_mpg: number;
     class: string;
+    fuel_type: string;
 }
 
 const apiClient = new APIClient<Cars>('/cars')

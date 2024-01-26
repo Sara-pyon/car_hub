@@ -1,4 +1,4 @@
-import FilterBySize from '../components/FilterBySize'
+import FilterBySize from '../components/FilterByFuel'
 import Finance from '../components/Finance'
 import Footer from '../components/Footer/Footer'
 import Header from '../components/Header/Header'

@@ -12,7 +12,7 @@ const Header = () => {
         backgroundSize='cover'
         objectFit='cover'
         >
-      <NavBar />
+      <NavBar background='transparent' />
       <HeaderContent />
       <HeaderFooter />
    </Box>
