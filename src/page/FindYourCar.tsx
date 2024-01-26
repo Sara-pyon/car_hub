@@ -9,11 +9,11 @@ const FindYourCar = () => {
 
   return (
     <>
-        <NavBar background='first'/>
+        <NavBar background='first' location='find'/>
         <SimpleGrid templateColumns= '300px 1fr'
         className='container'
         marginTop={5}>
-          <Box width='100%' height='100vh'>
+          <Box width='100%'>
             <Filter />
           </Box>
           <Box width='100%' height='100vh' bg='lightblue'/>

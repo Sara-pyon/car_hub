@@ -15,6 +15,7 @@
     padding-inline: 2rem;
 }
 .nav__item{
+    position: relative;
     list-style: none;
     color: white;
     font-weight: 400;
@@ -44,6 +45,10 @@
 .toggle-open{
     display: none;
   }
+.active::after {
+  width: 60%;
+  opacity: 1;
+}
 @media screen and (max-width:768px) {
   .toggle-open{
     display: initial;
