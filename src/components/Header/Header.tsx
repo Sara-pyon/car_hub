@@ -12,10 +12,8 @@ const Header = () => {
         backgroundSize='cover'
         objectFit='cover'
         >
-    <div className="container">
       <NavBar />
       <HeaderContent />
-    </div>
       <HeaderFooter />
    </Box>
   )

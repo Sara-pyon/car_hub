@@ -17,7 +17,6 @@ const HomePage = () => {
       <Nrma />
       <Partners />
       <Finance />
-      <Footer />
     </>
   )
 }

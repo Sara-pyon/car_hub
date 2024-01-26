@@ -4,7 +4,8 @@ import { IoIosSearch } from "react-icons/io";
 
 const HeaderContent = () => {
   return (
-        <Flex justifyContent={{base:'center', md:'left'}}>
+        <Flex justifyContent={{base:'center', md:'left'}}
+            className='container'>
             <Box width='fit-content' paddingInline={3}
                  paddingTop={10} paddingBottom={20}>
                 <Heading size={{base: '2xl', sm: '3xl'}} paddingBottom={10} color='white'>
