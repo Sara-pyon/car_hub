@@ -3,7 +3,7 @@ import { create } from "zustand";
 interface CarQuery{
     year?: number;
     fuel?: string;
-    make?:string;
+    make?: string;
 }
 
 interface CarQueryStore {
