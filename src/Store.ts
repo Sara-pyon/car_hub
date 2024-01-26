@@ -1,20 +1,23 @@
 import { create } from "zustand";
 
-interface Favorite{
-    model: string;
+interface CarQuery{
+    year?: number;
+    fuel?: string;
+    make?:string;
 }
 
-interface FavoriteStore{
-    favoriteCars: Favorite[],
-    addFavorite: (model:string) => void;
-    removeFavorite: (model:string) => void;
+interface CarQueryStore {
+    carQuery: CarQuery;
+    setYear: (year: number) => void;
+    setFuel: (fuel:string) => void;
+    setMake: (make:string) => void;
 }
 
-const useFavoriteCarStore = create<FavoriteStore>(set => ({
-    favoriteCars: [],
-    addFavorite: (model) => set((state) => ({favoriteCars: [...state.favoriteCars, {model}]})),
-    removeFavorite: (model) => set((state) => ({favoriteCars: state.favoriteCars.filter(c => c.model !== model)}))
+const useCarQueryStore = create<CarQueryStore>(set => ({
+    carQuery: {},
+    setYear: (year) => set((store) => ({carQuery:{...store.carQuery, year} })),
+    setFuel: (fuel) => set((store) => ({carQuery:{...store.carQuery, fuel}})),
+    setMake: (make) => set((store) => ({carQuery:{...store.carQuery, make}}))
 }))
 
-export default useFavoriteCarStore;
-
+export default useCarQueryStore;

@@ -3,7 +3,7 @@ import carImage from '../images/104058_XC_02.jpg.png'
 import { Cars } from '../hooks/use2018Cars'
 import { IoHeartOutline, IoHeart } from 'react-icons/io5'
 import { CiCircleInfo } from "react-icons/ci";
-import useFavoriteCarStore from '../Store';
+import useFavoriteCarStore from '../favoriteStore';
 
 interface Props{
    car: Cars | undefined;
