@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
 interface CarQuery{
-    year?: number;
+    year?: string;
     fuel?: string;
     make?: string;
     drive?:string;
@@ -10,7 +10,7 @@ interface CarQuery{
 
 interface CarQueryStore {
     carQuery: CarQuery;
-    setYear: (year: number) => void;
+    setYear: (year: string) => void;
     setFuel: (fuel:string) => void;
     setMake: (make:string) => void;
     setDrive: (drive:string) => void;

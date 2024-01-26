@@ -5,8 +5,16 @@ import { IoCarOutline, IoCalendarClearOutline } from "react-icons/io5";
 import { PiGasPump } from "react-icons/pi";
 import { GiGearStickPattern } from "react-icons/gi";
 import { TbWheel } from "react-icons/tb";
+import useCarQueryStore from '../../store/carQueryStore';
 
 const Filter = () => {
+  const carQuery = useCarQueryStore(s => s.carQuery);
+  const setMaker = useCarQueryStore(s => s.setMake);
+  const setYear = useCarQueryStore(s => s.setYear);
+  const setDrive = useCarQueryStore(s => s.setDrive);
+  const setTransmission = useCarQueryStore(s => s.setTransmission);
+  const setFuelType = useCarQueryStore(s => s.setFuel);
+
   return (
     <Box border='1.5px solid #DCE4E9'
     borderRadius={10}
@@ -16,32 +24,41 @@ const Filter = () => {
         <Box>
             <FilterItem 
             icon={<IoCarOutline fontSize={23} />}
-            title='Make'
-            list={carsFilter.markers} />
+            title='Make' list={carsFilter.markers} 
+            onSelect={(item) => setMaker(item)}
+            selectedItem={carQuery.make}/>
         </Box>
         <Box>
             <FilterItem 
             icon={<IoCalendarClearOutline fontSize={20} />}
             title='Year'
-            list={carsFilter.years} />
+            list={carsFilter.years}
+            onSelect={(item) => setYear(item)}
+            selectedItem={carQuery.year} />
         </Box>
         <Box>
             <FilterItem 
             icon={<TbWheel fontSize={23} />}
             title='Drivetrain'
-            list={carsFilter.drives} />
+            list={carsFilter.drives}
+            onSelect={(item) => setDrive(item)}
+            selectedItem={carQuery.drive} />
         </Box>
         <Box>
             <FilterItem 
             icon={<GiGearStickPattern fontSize={23} />}
             title='Transmission'
-            list={carsFilter.transmission} />
+            list={carsFilter.transmission}
+            onSelect={(item) => setTransmission(item)}
+            selectedItem={carQuery.transmission} />
         </Box>
         <Box>
             <FilterItem 
             icon={<PiGasPump fontSize={23} />}
             title='Fuel Type'
-            list={carsFilter.fuelType} />
+            list={carsFilter.fuelType}
+            onSelect={(item) => setFuelType(item)}
+            selectedItem={carQuery.fuel} />
         </Box>
     </Box>
   )

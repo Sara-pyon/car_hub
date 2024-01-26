@@ -23,7 +23,7 @@ const markers = [
 
   const years = [];
   for (let i=2010; i<2024; i++){
-    years.push(i);
+    years.push(i.toString());
   }
 
   const fuelType = ['Gas','Diesel','Electricity'];

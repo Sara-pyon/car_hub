@@ -3,15 +3,15 @@ import { FaChevronRight } from "react-icons/fa6";
 import styles from './FilterItem.module.css'
 import { ReactNode, useState } from 'react';
 
-
-
 interface Props{
   icon: ReactNode;
   title: string;
-  list: string[] | number[];
+  list: string[];
+  selectedItem?: string;
+  onSelect: (item:string) => void;
 }
 
-const FilterItem = ({title,list,icon}:Props) => {
+const FilterItem = ({title,list,icon,onSelect,selectedItem}:Props) => {
   const [toggled, setToggled] = useState(true);
   const toggleList = toggled? styles.menuList : 
                               [styles.menuList, styles.showList].join(' ');
@@ -33,7 +33,13 @@ const FilterItem = ({title,list,icon}:Props) => {
       </Box>
       <div className={toggleList}>
         {list.map(item => 
-        <Text key={item} color='second'>{item}</Text>
+        <Text key={item} color='second'
+        cursor='pointer'
+        onClick={() => onSelect(item)}
+        fontWeight={selectedItem === item ? 'bold':'normal'}
+        >
+          {item}
+        </Text>
         )}
       </div>
     </Box>
