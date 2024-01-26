@@ -1,6 +1,8 @@
 import './App.css'
+
 import FilterBySize from './components/FilterBySize'
 import Finance from './components/Finance'
+import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import NewCars from './components/NewCars'
 import Nrma from './components/Nrma'
@@ -18,6 +20,7 @@ function App() {
       <Nrma />
       <Partners />
       <Finance />
+      <Footer />
     </>
   )
 }

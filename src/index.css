@@ -9,6 +9,8 @@
   --color-icon-pink: #e26176;
   --color-primary: #312a45;
   --color-secondary: #423E71;
+  --color-third: #332E69;
+  --color-border: #DCE4E9;
 }
 .container{
   max-width: 1200px;
