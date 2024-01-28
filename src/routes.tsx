@@ -4,7 +4,7 @@ import Layout from "./page/Layout";
 import FindYourCar from "./page/FindYourCar";
 
 const router = createBrowserRouter([
-    {path:'/', element: <Layout />,
+    {path:'/', element: <Layout />, errorElement:<HomePage />,
     children: [
         {index:true, element: <HomePage /> },
         {path:'cars/find', element:<FindYourCar />},

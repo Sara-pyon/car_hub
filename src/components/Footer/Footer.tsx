@@ -6,7 +6,7 @@ import { Box } from '@chakra-ui/react'
 const Footer = () => {
   return (
     <Box borderTop='2px solid #DCE4E9'
-        marginTop={5} bg='bgPrimary'>
+         bg='bgPrimary'>
       <div className='container section'>
       <FooterSupport />
       <FooterMenu />

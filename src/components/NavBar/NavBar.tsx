@@ -25,8 +25,10 @@ const NavBar = ({background,location}:Props) => {
           <Corma />
         </Link>
         <ul className={navClass}>
-              <li className={`${location==='find' ? 'nav__item active' : 'nav__item'}`}>
-                Find your Car</li>
+              <Link to='/cars/find'>
+                <li className={`${location==='find' ? 'nav__item active' : 'nav__item'}`}>
+                  Find your Car</li>
+              </Link>
               <li className={`${location==='sell' ? 'nav__item active' : 'nav__item'}`}>
                 Sell or trade in</li>
               <li className={`${location==='how' ? 'nav__item active' : 'nav__item'}`}>

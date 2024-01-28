@@ -1,4 +1,4 @@
-import FilterBySize from '../components/FilterByFuel'
+import FilterByFuel from '../components/FilterByFuel'
 import Finance from '../components/Finance'
 import Header from '../components/Header/Header'
 import NewCars from '../components/NewCars'
@@ -10,7 +10,7 @@ const HomePage = () => {
   return (
     <>
       <Header />
-      <FilterBySize/>
+      <FilterByFuel/>
       <WhyCarma />
       <NewCars />
       <Nrma />

@@ -1,15 +1,17 @@
 import { Box, Card, CardBody, Flex, Heading, Image, Text, Tooltip} from '@chakra-ui/react'
 import carImage from '../images/104058_XC_02.jpg.png'
-import { Cars } from '../hooks/use2018Cars'
+import { Cars } from '../hooks/useCars'
 import { IoHeartOutline, IoHeart } from 'react-icons/io5'
 import { CiCircleInfo } from "react-icons/ci";
 import useFavoriteCarStore from '../store/favoriteStore';
 
 interface Props{
    car: Cars | undefined;
+   cardMaxW?: string;
+   cardW?: string;
 }
 
-const CarCard = ({car}:Props) => {
+const CarCard = ({car,cardMaxW,cardW}:Props) => {
 
   const {favoriteCars,addFavorite, removeFavorite} = useFavoriteCarStore();
 
@@ -17,7 +19,7 @@ const CarCard = ({car}:Props) => {
 
   return (
     <Box >
-      <Card borderRadius={10} width='300px' height='380px'
+      <Card borderRadius={10} maxW={cardMaxW} width={cardW} height='380px'
             overflow='hidden'>
           <Image src={carImage} alt='car image'/>
           <CardBody>

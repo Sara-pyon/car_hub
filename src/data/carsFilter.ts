@@ -11,7 +11,6 @@ const markers = [
     'Isuzu',
     'Ford',
     'General Motors',
-    'Fiat Chrysler Automobiles',
     'Volkswagen',
     'Mercedes-Benz',
     'BMW',
@@ -28,7 +27,7 @@ const markers = [
 
   const fuelType = ['Gas','Diesel','Electricity'];
 
-  const drives = ['FWD','RWD','AED','4WD'];
+  const drives = ['FWD','RWD','AWD','4WD'];
 
   const transmission = ['Manual', 'Automatic']
 
