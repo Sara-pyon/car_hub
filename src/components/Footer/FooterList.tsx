@@ -33,10 +33,10 @@ const FooterList = ({title,list,link}:Props) => {
       </Box>
       <div className={toggleList}>
         {list.map(item => 
-        <Link to={`/cars/${link}/${item}`}
+        <Link key={item} to={`/cars/${link}/${item}`}
         onClick={() => {title === 'Popular Makes'? 
           setMake(item) : ''}}>
-        <Text key={item} color='second'>
+        <Text color='second'>
           {item}
         </Text>
         </Link>
