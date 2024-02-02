@@ -29,12 +29,18 @@ const NavBar = ({background,location}:Props) => {
                 <li className={`${location==='find' ? 'nav__item active' : 'nav__item'}`}>
                   Find your Car</li>
               </Link>
-              <li className={`${location==='sell' ? 'nav__item active' : 'nav__item'}`}>
-                Sell or trade in</li>
-              <li className={`${location==='how' ? 'nav__item active' : 'nav__item'}`}>
-                How it works</li>
-              <li className={`${location==='finance' ? 'nav__item active' : 'nav__item'}`}>
-                Car finance</li>
+              <Link to='/sell'>
+                <li className={`${location==='sell' ? 'nav__item active' : 'nav__item'}`}>
+                  Sell or trade in</li>
+              </Link>
+              <Link to='/how'>
+                <li className={`${location==='how' ? 'nav__item active' : 'nav__item'}`}>
+                  How it works</li>
+              </Link >
+              <Link to='/finance'>
+                <li className={`${location==='finance' ? 'nav__item active' : 'nav__item'}`}>
+                  Car finance</li>
+              </Link>
               <IoCloseOutline className='toggle-close' 
                 onClick={toggle}/>
           </ul>

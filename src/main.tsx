@@ -5,8 +5,8 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { ChakraProvider } from '@chakra-ui/react'
 import './index.css'
 import theme from './ChackraCustom/theme.ts'
-import { RouterProvider } from 'react-router-dom'
-import router from './routes.tsx'
+import { RouterProvider, } from 'react-router-dom'
+import router from './routes/routes.tsx'
 
 const queryClient = new QueryClient;
 
