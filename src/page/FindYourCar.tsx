@@ -4,7 +4,6 @@ import Filter from '../components/FindYourCars/Filter';
 import CarsGrid from '../components/FindYourCars/CarsGrid';
 import DrawerFilter from '../components/FindYourCars/DrawerFilter';
 import FindHeading from '../components/FindYourCars/FindHeading';
-import ScrollToTop from '../routes/ScrollToTop';
 
 
 const FindYourCar = () => {
