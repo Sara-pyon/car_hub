@@ -8,7 +8,7 @@ const axiosInstance = axios.create({
         'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
     },
     params:{
-        limit: 5,
+        limit: 1,
     }
 })
 

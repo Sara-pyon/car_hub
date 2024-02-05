@@ -2,9 +2,14 @@ import { Box, Button, Flex, Heading } from '@chakra-ui/react'
 import useNewCars from '../hooks/useNewCars'
 import CarCard from './CarCard';
 import { IoIosArrowForward } from 'react-icons/io';
+import { useNavigate } from 'react-router-dom';
+import useCarQueryStore from '../store/carQueryStore';
 
 const NewCars = () => {
     const {data, error, isLoading} = useNewCars();
+    const navigate = useNavigate();
+    const setYear = useCarQueryStore(s => s.setYear);
+    const reset = useCarQueryStore(s => s.reset) ;
 
     if(!data) return null;
     if(error) throw error;
@@ -21,7 +26,11 @@ const NewCars = () => {
     <Flex justifyContent='center' paddingBlock={5}>
         <Button bg='second' color='white' fontSize='sm'
                   rightIcon={<IoIosArrowForward />}
-                  _hover={{bg:'second'}}>
+                  _hover={{bg:'second'}}
+                  onClick={() => {
+                    reset;
+                    setYear('2023');
+                    navigate('/cars/find');}}>
             Browse (733) cars
           </Button>
     </Flex>
