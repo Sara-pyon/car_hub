@@ -21,7 +21,7 @@ const NewCars = () => {
         New cars every day</Heading>
     <Box display='flex' flexDirection='row' columnGap={5}
         overflowX='scroll' paddingBottom={2}>
-        {data.map((car,index) => <CarCard key={index} car={car} />)}
+        {data.map((car,index) => <CarCard key={index} car={car} cardW='280px'/>)}
     </Box>
     <Flex justifyContent='center' paddingBlock={5}>
         <Button bg='second' color='white' fontSize='sm'
