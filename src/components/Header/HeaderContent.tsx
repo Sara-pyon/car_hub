@@ -1,8 +1,11 @@
 import { Box, Button, Flex, Heading, Input, InputGroup, InputRightElement, Text } from '@chakra-ui/react'
 import { IoIosSearch } from "react-icons/io";
+import { useNavigate } from 'react-router-dom';
 
 
 const HeaderContent = () => {
+    const navigate = useNavigate();
+    
   return (
         <Flex justifyContent={{base:'center', md:'left'}}
             className='container'>
@@ -26,7 +29,8 @@ const HeaderContent = () => {
                     <Box height='1px' bg='white' opacity='0.5' width='100%'/>
                 </Box>
                 <Button color='white' width='100%'
-                        height='55px' >
+                        height='55px' 
+                        onClick={() => navigate('/cars/find')}>
                     Browse all 733 cars
                 </Button>
             </Box>
