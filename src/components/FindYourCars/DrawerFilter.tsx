@@ -8,24 +8,29 @@ const DrawerFilter = () => {
   return (
     <>
     <Button onClick={onOpen}
-    bg='bgSecondary' size='md'
+    bg='bgPrimary' size='md'
+    _hover={{bg:'bgSecondary'}}
     border='2px solid #DCE4E9'>
       Filter
     </Button>
     <Drawer
-        isOpen={isOpen}
         placement='left'
+        isOpen={isOpen}
         onClose={onClose}
       >
         <DrawerOverlay />
-          <DrawerContent>
+          <DrawerContent overflowY='scroll'>
             <DrawerCloseButton />
             <Filter />
             <DrawerFooter>
-              <Button variant='outline' mr={3} onClick={onClose}>
+              <Button variant='outline' mr={3} onClick={onClose}
+               bg='bgPrimary' _hover={{bg:'bgSecondary'}}>
                 Cancel
               </Button>
-              <Button colorScheme='blue'>Save</Button>
+              <Button  variant='outline'
+              bg='bgPrimary' _hover={{bg:'bgSecondary'}}
+              onClick={onClose}
+              >Save</Button>
             </DrawerFooter>
           </DrawerContent>
       </Drawer>
