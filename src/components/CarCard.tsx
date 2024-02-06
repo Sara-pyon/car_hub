@@ -13,7 +13,7 @@ interface Props{
 
 const CarCard = ({car,cardMaxW,cardW}:Props) => {
 
-  const {favoriteCars,addFavorite, removeFavorite} = useFavoriteCarStore();
+  const {favoriteCars,addFavorite,removeFavorite} = useFavoriteCarStore();
 
   if(!car) return null;
 

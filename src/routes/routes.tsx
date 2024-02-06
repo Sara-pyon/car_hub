@@ -5,6 +5,7 @@ import FindYourCar from "../page/FindYourCar";
 import SellOrTrade from "../page/SellOrTrade";
 import HowItWorks from "../page/HowItWorks";
 import CarFinance from "../page/CarFinance";
+import FavoriteCars from "../page/FavoriteCars";
 
 const router = createBrowserRouter([
     {path:'/', element: <Layout />, errorElement:<HomePage />,
@@ -14,7 +15,8 @@ const router = createBrowserRouter([
         {path:'cars/find/:slug', element: <FindYourCar /> },
         {path:'sell', element: <SellOrTrade />},
         {path:'how', element: <HowItWorks />},
-        {path:'finance', element: <CarFinance />}
+        {path:'finance', element: <CarFinance />},
+        {path:'favorite',element: <FavoriteCars />}
     ]
 }
 ])
